@@ -15,9 +15,9 @@ describe "Static pages" do
 			:text => "#{base_title}")
     end
     
-    it "should not have the custom page title" do
+    it "should have the custom page title" do
       visit '/static_pages/home'
-      page.should_not have_selector('title',
+      page.should have_selector('title',
 			:text => "| Home")
     end
   end

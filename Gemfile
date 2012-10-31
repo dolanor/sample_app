@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'pg', '0.12.2'
-
+gem 'bootstrap-sass', '2.0.4'
+#gem 'pg', '0.12.2'
+gem 'sqlite3', '1.3.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -16,8 +17,8 @@ end
 
 group :test do
 	gem 'capybara', '1.1.2'
-	gem "rb-inotify", "0.8.8"
-	gem "libnotify", "0.5.9"
+	gem 'rb-fsevent', '0.9.1', :require => false
+	gem 'growl', '1.0.3'
 end
 
 #group :production do
