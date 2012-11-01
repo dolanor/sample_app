@@ -15,6 +15,8 @@ group :development, :test do
 	gem "spork", "0.9.2"
 end
 
+gem "annotate", "2.5.0", group: :development
+
 group :test do
 	gem 'capybara', '1.1.2'
 	gem 'rb-fsevent', '0.9.1', :require => false
