@@ -13,7 +13,7 @@ require 'spec_helper'
 
 describe User do
   before { @user = User.new(name: "Example User", email: "user@example.com", 
-				password: "shaniisnotaprincess", password_confirmation: "foobar") }
+				password: "foobar", password_confirmation: "foobar") }
   
   subject { @user }
 
@@ -93,7 +93,7 @@ describe User do
     end
 
     describe "with invalid password" do
-      let(:user_for_invalid_password) { found_user.authenticate(@user.password) }
+      let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
       it { should_not  == user_for_invalid_password }
       specify { user_for_invalid_password.should be_false }
